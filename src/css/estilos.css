@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+}
+
+.cabecalho {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+
+@media ( max-width: 624px) {
+    .cabecalho {
+        justify-content: center;
+    }
+    .cabecalho .logo {
+        margin-bottom: 30px;
+    }
+    .navegacao .menu .item a {
+        font-size: calc(0.6em + 1vw);
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    margin-left: 30px;
+    
+}
+
+.logo .imagem {
+    width: 400px;
+}
+
+/* .logo .titulo {
+    margin-left: 100px;
+    font-size: 12px;
+    color: white;
+    transition: 0.5s ease-in-out;
+    font-weight: 400;
+
+} */
+
+/* .logo:hover .titulo {
+    color: orange
+} */
+
+.navegacao .menu {
+    display: flex;
+    font-size: 10px;
+    
+}
+
+.navegacao .menu .item {
+    margin: 10px;
+}
+
+.navegacao .menu .item a {
+    padding: 16px;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+}
+
+.navegacao .menu .item a:hover {
+    color: orange;
+}
+
+.conteudo-principal .paineis {
+    height: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 900px) {
+    .conteudo-principal .paineis {
+        height: 500px;
+    }
+}
+
+.conteudo-principal .paineis .imagem-painel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    min-height: 98%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(90%);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.conteudo-principal .paineis  .servico1 {
+    background-image: url('../imagens/situacao-da-equipe-comercial-do-presente-e-compartilha-a-ideia.jpg');
+}
+.conteudo-principal .paineis .servico2 {
+    background-image: url('../imagens/negocio-mulher-mao-financeiro-graficos-laptop-tabela.jpg');
+}
+.conteudo-principal .paineis .servico3 {
+    background-image: url('../imagens/vista-superior-de-empresarios-trabalhando-com-ipad.jpg');
+}
+.conteudo-principal .paineis .servico4 {
+    background-image: url('../imagens/laptop-tablet-e-telefone-junto-com-graficos.jpg');
+}
+
+.conteudo-principal .paineis .mostrar {
+    opacity: 1;
+}
+.conteudo-principal .paineis .titulo {
+    color:white ;
+    text-transform: uppercase;
+    font-size: calc(1em +1vw);
+}
+.conteudo-principal .paineis .seta {
+    background-image: url('../imagens/logo-seta.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+.conteudo-principal .paineis .seta.desabilitar {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.conteudo-principal .paineis .seta.btn-voltar {
+    left: 30px;
+    transform: rotate(180deg);
+    
+    
+}
+.conteudo-principal .paineis .seta.btn-avancar {
+    right: 30px;
+    transform: rotate(360deg);
+    
+}
+
+.quem-somos {
+    background-color: black;
+    
+}
+.quem-somos .conteudo {
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    margin-left: 30px;
+}
+.quem-somos .conteudo .informacoes {
+    width: 50%;
+}
+
+.quem-somos .imagem {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(max-width: 1200px) {
+    .quem-somos .conteudo {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 30px;
+    }
+
+    .quem-somos .conteudo .informacoes {
+        margin-bottom: 30px;
+    }
+
+    .quem-somos .conteudo .informacoes {
+        width: 100%;
+    }
+
+    /* .quem-somos .imagem {
+        display: none;
+    } */
+}
+.quem-somos .conteudo .informacoes .titulo {
+    font-size: 50px;
+    margin-bottom: 30;
+    color: white;
+}
+
+.quem-somos .conteudo .informacoes .texto {
+    font-size: 20px;
+    line-height: 1.5;
+    color: white;
+    font-weight: 400;
+}
+
+.rodape {
+    padding: 80px 0 20px 0;
+}
+.rodape .navegacao {
+    
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+@media(max-width:940px) {
+    .rodape .navegacao {
+        justify-content: center;
+    }
+    .rodape .navegacao .logo {
+        margin-bottom: 30px;
+    }
+
+    .rodape .navegacao .logo,
+    .rodape .navegacao .redes-sociais {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .rodape .navegacao .logo  {
+        width: 50px;
+    }
+
+    .rodape .navegacao .menu {
+        margin: 50px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rodape .navegacao .menu .item {
+        margin: 20px 0;
+    }
+}
+
+.rodape .redes-sociais {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rodape .redes-sociais a {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    border: 2px solid #111;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 20%;
+    transition: 0.3s ease-in-out;
+    font-size: 30px;
+}
+.rodape .redes-sociais a:hover {
+    background-color: orange;
+}
+
+/* .rodape .copyripht {
+    text-align: center;
+    
+    
+} */
